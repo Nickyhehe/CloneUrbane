@@ -14,9 +14,25 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        \App\Models\Category::factory()->create([
+            'name' => 'Baju',
+        ]);
+        \App\Models\Category::factory()->create([
+            'name' => 'Celana',
+        ]);
+        \App\Models\Category::factory()->create([
+            'name' => 'Jaket',
+        ]);
+
+
+        \App\Models\genderCategory::factory()->create([
+            'name' => 'Men',
+        ]);
+        \App\Models\genderCategory::factory()->create([
+            'name' => 'Woman',
+        ]);
+
+        
+        \App\Models\Product::factory(10)->create();
     }
 }

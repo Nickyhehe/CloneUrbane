@@ -9,7 +9,8 @@
             </div>
 
         <div class="flex flex-col w-full">
-            <form action="" method="POST" class="flex flex-col justify-center items-center gap-8 py-8">
+            <form action="/login-user" method="POST" class="flex flex-col justify-center items-center gap-8 py-8">
+                @csrf
                 <div class="flex justify-start items-center border-b-2 py-2 border-stroke w-full">
                     <i class="bx bxs-envelope bx-sm pl-1 pr-2 text-secondary"></i>
                     <input class="border-l-2 border-stroke bg-transparent w-full text-secondary placeholder-secondary pl-2 focus:outline-none" type="text" name="email" id="emailInput" placeholder="Email">
@@ -21,11 +22,12 @@
                     </div>
                     <a class="font-semibold" href="#">Forgot password?</a>
                 </div>
+                
+                <button class="text-2xl font-bold text-highlight bg-primary w-full rounded-lg py-2" type="submit">Login</button>
             </form>
 
             <div class="flex flex-col justify-center items-center">
-                <button class="text-2xl font-bold text-highlight bg-primary w-full rounded-lg py-2">Login</button>
-                <p>Don't have an account ? <span class="text-primary font-semibold"><a href="">Register here</a></span></p>
+                <p>Don't have an account ? <span class="text-primary font-semibold"><a href="/register">Register here</a></span></p>
             </div>
         </div>
     </div>

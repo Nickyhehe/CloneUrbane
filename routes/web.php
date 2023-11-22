@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +28,11 @@ Route::get('/register', function () {
 Route::get('/forget-password', function(){
     return view('pages.forget');
 });
+
+Route::post('/login-user', [UserController::class, 'login']);
+
+Route::post('/register-user', [UserController::class, 'register']);
+
+Route::get('/home/{user:id}', [UserController::class, 'index']);
+
+Route::get('/detailCategory/{id}', [ProductController::class, 'index']);
